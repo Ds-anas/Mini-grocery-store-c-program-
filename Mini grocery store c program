@@ -1,0 +1,71 @@
+#include <stdio.h>
+
+int main()
+{
+    int rice, milk, bread, sugar, oil;
+    int eggs, biscuits, tea, soap, noodles;
+    float total;
+
+    printf("===== MINI GROCERY STORE =====\n");
+    printf("Enter quantity of each item:\n");
+
+    printf("Rice (Rs.60/kg): ");
+    scanf("%d", &rice);
+
+    printf("Milk (Rs.30/litre): ");
+    scanf("%d", &milk);
+
+    printf("Bread (Rs.40/packet): ");
+    scanf("%d", &bread);
+
+    printf("Sugar (Rs.45/kg): ");
+    scanf("%d", &sugar);
+
+    printf("Cooking Oil (Rs.120/litre): ");
+    scanf("%d", &oil);
+
+    printf("Eggs (Rs.7/piece): ");
+    scanf("%d", &eggs);
+
+    printf("Biscuits (Rs.10/packet): ");
+    scanf("%d", &biscuits);
+
+    printf("Tea Powder (Rs.50/packet): ");
+    scanf("%d", &tea);
+
+    printf("Soap (Rs.35/piece): ");
+    scanf("%d", &soap);
+
+    printf("Noodles (Rs.15/packet): ");
+    scanf("%d", &noodles);
+
+    if (rice < 0 || milk < 0 || bread < 0 || sugar < 0 ||
+        oil < 0 || eggs < 0 || biscuits < 0 || tea < 0 ||
+        soap < 0 || noodles < 0)
+    {
+        printf("Quantity cannot be negative. Please try again.\n");
+    }
+    else
+    {
+        total = rice * 60 + milk * 30 + bread * 40 +
+                sugar * 45 + oil * 120 + eggs * 7 +
+                biscuits * 10 + tea * 50 + soap * 35 +
+                noodles * 15;
+
+        printf("\n===== CUSTOMER BILL =====\n");
+        printf("Rice: Rs.%d\n", rice * 60);
+        printf("Milk: Rs.%d\n", milk * 30);
+        printf("Bread: Rs.%d\n", bread * 40);
+        printf("Sugar: Rs.%d\n", sugar * 45);
+        printf("Cooking Oil: Rs.%d\n", oil * 120);
+        printf("Eggs: Rs.%d\n", eggs * 7);
+        printf("Biscuits: Rs.%d\n", biscuits * 10);
+        printf("Tea Powder: Rs.%d\n", tea * 50);
+        printf("Soap: Rs.%d\n", soap * 35);
+        printf("Noodles: Rs.%d\n", noodles * 15);
+        printf("-------------------------\n");
+        printf("Total Bill: Rs.%.2f\n", total);
+    }
+
+    return 0;
+}

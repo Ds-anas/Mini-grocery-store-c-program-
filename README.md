@@ -1,1 +1,0 @@
-# Mini-grocery-store-c-program-
